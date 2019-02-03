@@ -55,6 +55,7 @@
 
             if (in_array($thisBook, ${'filterAuthorAll' . $DBItem['book_id']})) {
               $needfulAllID[] = $DBItem['book_id'];
+              $needfulAllID = array_unique($needfulAllID);
             }
 
           }
@@ -68,6 +69,7 @@
 
             if (in_array($thisBook, ${'filterAuthorAll' . $DBItem['book_id']})) {
               $needfulAllID[] = $DBItem['book_id'];
+              $needfulAllID = array_unique($needfulAllID);
             }
 
           }

@@ -12,7 +12,7 @@
       $connectDB -> exec($sqlSend);
     }
 
-  header("Location: ../../admin.php");
+    header("Location: ../../admin/index.php");
 
   } catch (PDOExeption $e) {
     echo $sqlSend.$e->getMessage();
