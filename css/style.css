@@ -2,13 +2,32 @@
   box-sizing: border-box;
 }
 
-input {
-  min-width: 300px;
-}
-
 body {
   margin: 0;
   font-family: 'Open Sans', 'Roboto', 'Arial';
+}
+
+
+input, textarea {
+  padding: 5px 7px;
+  border: 1px solid #adadad;
+  border-radius: 5px;
+  resize: none;
+  font-size: 16px;
+  min-width: 300px;
+}
+
+button {
+  padding: 7px 10px;
+  font-size: 16px;
+  background: #007bff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: .15s;
+}
+button:hover {
+  background: #0f61b9;
 }
 
 .header {
@@ -101,10 +120,15 @@ body {
 .book__link {
   display: inline-block;
   margin-top: 15px;
-  color: green;
+  background: #007bff;
+  color: #fff;
+  padding: 10px 40px;
+  text-align: center;
+  text-decoration: none;
+  transition: .15s;
 }
 .book__link:hover {
-  text-decoration: none;
+  background: #0f61b9;
 }
 
 .book__admin {
@@ -159,6 +183,7 @@ body {
 .edit-book__bot {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .buy-book {
@@ -178,7 +203,7 @@ body {
   width: 30px;
   display: block;
   text-align: center;
-  line-height: 30px;
+  line-height: 28px;
   cursor: pointer;
   text-decoration: none;
   color: #000;
@@ -189,15 +214,30 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  width: 300px;
 }
 
 .buy-book-quantity__input {
-  margin: 0 5px !important;
+  margin: 0 !important;
+  min-width: 245px;
+  border-radius: 0;
 }
 
 .buy-book__price {
   border: none;
   min-width: 50px;
+  margin: 0 !important;
+  width: 70px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.buy-book__full-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
 }
 
 .book-filter {

@@ -59,7 +59,7 @@
             <input class="buy-book__field buy-book-quantity__input" type="number" placeholder="Количество" name="buy-quantity" value="1" required readonly>
             <a href="javasctipt:void(0);" class="buy-book-quantity__plus">+</a>
           </div>
-          <label>Конечная цена: 
+          <label class="buy-book__full-price">Конечная цена: 
           <input class="buy-book__price" name="buy-all-price" data-price="<?= $DBItem['book_price'] ?>" value="<?= $DBItem['book_price'] ?>" type="text" readonly>
           </label>
           <button type="submit" class="buy-book__submit">Купить</button>
