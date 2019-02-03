@@ -1,0 +1,9 @@
+<IfModule dir_module>
+    DirectoryIndex index.php
+
+    AuthType Basic 
+    AuthName "Please login" 
+    AuthUserFile "E:/Programs/Yandex.Disc/YandexDisk/Files/OSPanel/domains/localhost/admin/.htpasswd"  
+    require valid-user
+
+</IfModule>

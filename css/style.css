@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+}
+
+input {
+  min-width: 300px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', 'Roboto', 'Arial';
+}
+
+.header {
+  background: #007bff;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo-link {
+  margin: 0;
+  text-decoration: none;
+  color: #fff;
+}
+
+.header__admin-link {
+  color: #fff;
+}
+
+.header__admin-link:hover {
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 40px 0 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.book {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #dedede;
+  transition: .15s;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+
+.book:hover {
+  box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,.1), 0 0.9375rem 1.40625rem rgba(90,97,105,.1), 0 0.25rem 0.53125rem rgba(90,97,105,.12), 0 0.125rem 0.1875rem rgba(90,97,105,.1);
+}
+
+.book__name {
+  margin-top: 5px;
+}
+
+.book__descr_head {
+  margin-bottom: 0;
+}
+
+.book__descr {
+  margin-top: 0;
+}
+
+.book__author:before {
+  content: 'Автор: ';
+}
+
+.book__genre:before {
+  content: 'Жанр: ';
+}
+
+.book__bot {
+  display: flex;
+  flex-direction: column;
+}
+
+.book__price {
+  color: #fb2323;
+  margin-top: 10px;
+  display: block;
+}
+
+.book__price:after {
+  content: ' грн.';
+}
+
+.book__link {
+  display: inline-block;
+  margin-top: 15px;
+  color: green;
+}
+.book__link:hover {
+  text-decoration: none;
+}
+
+.book__admin {
+  margin-top: 30px;
+}
+
+.book__delete {
+  color: red;
+  margin-left: 20px;
+}
+.book__delete:hover {
+  text-decoration: none;
+}
+
+.add-book {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 0 auto 40px;
+}
+
+.add-book input, .add-book textarea {
+  margin-bottom: 10px;
+}
+
+.add-book__result {
+  margin-top: 20px;
+  text-align: center;
+  color: green;
+}
+
+.add-book__cancel {
+  margin-left: 50px;
+  color: red;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.add-book__cancel:hover {
+  text-decoration: none;
+}
+
+.add-book label, .edit-book label {
+  font-size: 14px;
+}
+
+.edit-book {
+  display: none;
+  margin: 0;
+}
+
+.edit-book__bot {
+  display: flex;
+  flex-direction: row;
+}
+
+.buy-book {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0;
+  align-items: center;
+}
+
+.buy-book input {
+  margin-bottom: 10px;
+}
+
+.buy-book-quantity__minus, .buy-book-quantity__plus {
+  font-size: 35px;
+  border: 1px solid #ccc;
+  width: 30px;
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+
+.buy-book-quantity__block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.buy-book-quantity__input {
+  margin: 0 5px !important;
+}
+
+.buy-book__price {
+  border: none;
+  min-width: 50px;
+}
+
+.book-filter {
+  width: 250px;
+  flex-shrink: 0;
+  padding-right: 20px;
+}
+
+.book-filter__block {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-filter__link {
+  color: #0567ff;
+}
+
+.book-filter__link:hover {
+  text-decoration: none;
+}
+
+.admin {
+  flex-direction: column;
+}
