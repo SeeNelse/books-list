@@ -59,6 +59,7 @@ button:hover {
   padding: 40px 0 20px;
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
 }
 
 .book-list {
@@ -67,6 +68,14 @@ button:hover {
   flex-direction: column-reverse;
   justify-content: space-between;
   width: 100%;
+}
+
+.book-page {
+  flex-direction: column;
+}
+
+.book-page .book .book__link {
+  display: none;
 }
 
 .book {
