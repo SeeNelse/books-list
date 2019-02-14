@@ -2,8 +2,11 @@
   require_once('scripts/config.php');
   require_once('scripts/functions.php');
 
-  CreateOrConnectToDB($serverPath, $userDB, $passDB, $nameDB);
-  CreateOrConnectToTable();
+  $CreateOrConnectToDB = new CreateOrConnect($serverPath, $userDB, $passDB, $nameDB);
+  $CreateOrConnectToDB->toDB();
+  $CreateOrConnectToDB->toTable();
+
+  $renderBooks = new Render($serverPath, $userDB, $passDB, $nameDB);
 ?>
 
 <!DOCTYPE html>
@@ -28,20 +31,20 @@
     <div class="book-filter">
       <div class="book-filter__block">
         <h3>Авторы:</h3>
-        <?= renderLinks('author') ?>
+        <?= $renderBooks->renderLinks('author'); ?>
       </div>
 
       <div class="book-filter__block">
         <h3>Жанры:</h3>
-        <?= renderLinks('genre') ?>
+        <?= $renderBooks->renderLinks('genre'); ?>
       </div>
     </div>
     <div class="book-list">
       <?php
         if($_GET) {
-          renderAttrPage($attrID, $attrName); // рендер для фильтра
+          $renderBooks->renderAttrPage($attrID, $attrName);
         } else {
-          renderBooks(false, false); // рендер всех книг
+          $renderBooks->renderBooks(false, false);
         }
       ?>
     </div>

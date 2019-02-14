@@ -72,6 +72,7 @@ button:hover {
 
 .book-page {
   flex-direction: column;
+  align-items: center;
 }
 
 .book-page .book .book__link {

@@ -1,6 +1,8 @@
 <?php
   require_once('scripts/config.php');
   require_once('scripts/functions.php');
+
+  $renderBooks = new Render($serverPath, $userDB, $passDB, $nameDB);
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +22,7 @@
     <a href="/admin/index.php" class="header__admin-link">Админка</a>
   </div>
   <div class="wrapper book-page">
-    <?php renderBooks(false, $thisBookGet, false); ?>
+    <?php $renderBooks->renderBooks(false, $thisBookGet); ?>
     
     <form action="scripts/buy.php" method="POST" class="buy-book">
       <input type='hidden' name='id' value='<?= $thisBookGet ?>' class="buy-book__id" />

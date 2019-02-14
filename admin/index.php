@@ -2,7 +2,7 @@
   require_once('../scripts/config.php');
   require_once('../scripts/functions.php');
 
-  
+  $renderBooks = new Render($serverPath, $userDB, $passDB, $nameDB);
 ?>
 
 <!DOCTYPE html>
@@ -39,9 +39,7 @@
     </form>
 
     <div class="book-list">
-      <?php
-        renderBooks(true, false);
-      ?>
+      <?= $renderBooks->renderBooks(true, false); ?>
     </div>
   </div>
 

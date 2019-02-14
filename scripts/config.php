@@ -7,7 +7,7 @@
   $nameDB = 'booksDB';
 
   // куда отправляется заявка на покупку
-  $emailTo = "seenelse@gmail.com";
+  $emailTo = "example@gmail.com";
 
   // данные с формы добавления новой книги(addBook.php) или редактирование(editbook.php)
   $formName = addslashes($_POST['b-name']);
