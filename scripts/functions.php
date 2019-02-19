@@ -12,7 +12,7 @@
     }
 
     // Отправка в бд с помощью PDO или mysqli
-    private function sendToDB($request, $getArr, $lastIdTable) { // немного стыдно за этот кошмар
+    private function sendToDB($request, $getArr, $lastIdTable) {
       global $connectType;
       if ($connectType === 'pdo') {
         try {
