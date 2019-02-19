@@ -5,6 +5,7 @@
   $userDB = 'root';
   $passDB = '';
   $nameDB = 'booksDB';
+  $connectType = 'mysqli'; //pdo или mysqli
 
   // куда отправляется заявка на покупку
   $emailTo = "example@gmail.com";

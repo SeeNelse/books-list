@@ -39,6 +39,7 @@
         <?= $renderBooks->renderLinks('genre'); ?>
       </div>
     </div>
+
     <div class="book-list">
       <?php
         if($_GET) {
