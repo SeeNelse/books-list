@@ -1,5 +1,6 @@
 <?php
   require_once('scripts/config.php');
+  require_once('template/render.php');
   require_once('scripts/functions.php');
 
   $renderBooks = new Render($serverPath, $userDB, $passDB, $nameDB);
